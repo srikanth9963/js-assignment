@@ -6,23 +6,33 @@
     <title>Question 1</title>
 </head>
 <body>
- <script>
-        var today=  new Date();
-        var day=today.getDay();
-        var daylist=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-        document.write("Today is :" +" "+ daylist[day]+"<br>")
-        var hour = today.getHours();
-        var minute = today.getMinutes();
-        var second = today.getSeconds();
-        if(hour>12)
-        {
-            document.write("Current Time : "+(hour-12)+" PM"+ " : " + minute + " : " + second);
-        }
-        else
-        {
-            document.write("Current Time : "+hour+" AM"+ " : " + minute + " : " + second);
-        }
-
- </script>   
+    <!--1)console.log():used to print the output on the console.
+            console.log('sample');
+        2)console.error(): used to notify error on the console.
+            console.error('error');
+        3)console.warn(): used to notify it as warning.
+            console.warn('warning');
+        4)console.clear(): used to clear the screen.
+            console.clear();
+        5)console.time() and console.timeEnd(): used to print the time required to run a certain block of code.
+            console.time('sample');
+            let fun =function(){
+                console.log('print')
+            }
+            fun();
+            console.timeEnd('sample');
+        6)console.table(): used to generate a table
+            console.table({'a'=1, 'b'=2});
+        7)console.count(): used to count the no.loops any particular loop occurs 
+             for(let i=0;i<5;i++){
+                 console.log(i);
+             }
+        8)console.group() and console.groupEnd(): used to group the elements that are enclosed in between them.
+            console.group('simple');
+              console.warn('warning');
+              console.error('error');
+              console.log('sample');
+            console.groupEnd('simple');
+        >
 </body>
 </html>

@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>question 2</title>
+    <title>Question 2</title>
 </head>
 <body>
-    <h1>This is question 2</h1>
-  <button onclick="window.print()">print the page</button>
+    <!-- 
+        1)var : it is used to declare variables generally.the variables declared with this is globally used.
+        2)let : it is used to declare variables within certain block.these are local variables.
+        3)const : it is used to declare variables in certain blocks,but once it is declared it cannot be reassigned. 
+        -->
+        <script>
+            var name='srikanth';
+            var city='guntur'
+            console.log(name);
+            {
+                let city='vijayawada';
+                 
+                console.log(city);
+            }
+            const fruits=['apple','mango','banana'];
+            console.log(fruits);
+        </script>
+        
 </body>
 </html>
