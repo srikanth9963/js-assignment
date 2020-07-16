@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+<body>
+  <h1>Day 3 Question3</h1> 
+  <script>
+      let input = prompt('enter the input:')
+      if (input>90 && input<=100)
+       {
+          console.log(`Marks are ${input} and the grade is S`);
+        } else if(input>85 && input<=90) 
+        {
+          console.log(`Marks are ${input} and the grade is A+`);
+        } else if(input>=75 && input<=85)
+        { console.log(`Marks are ${input} and the grade is A`);
+        } 
+        else if(input>=65 && input<75)
+        {
+        console.log(`Marks are ${input} and the grade is B`);
+        } 
+        else if(input>=50 && input<65)
+        {
+        console.log(`Marks are ${input} and the grade is C`);
+        } 
+         else {
+        console.log(`Marks are ${input} and the grade is D`);
+        } 
+         
+        //Ternary Operator
+        let input1 = prompt('enter the input1')
+        console.log((input1>90 && input1<=100)?`Marks are ${input1} and the grade is S`: (input1>=85 && input1<=90) ? `Marks are ${input1} and the grade is A+` : (input1>=75 && input1<=85)?`Marks are ${input1} and the grade is A` : (input1>=65 && input1<75) ?`Marks are ${input1} and the grade is B` : (input1>=50 && input1<65) ?`Marks are ${input1} and the grade is C` :`Marks are ${input1} and the grade is D`);
+        
+  </script> 
+</body>
+</html>
