@@ -1,0 +1,27 @@
+<html>
+    <head>
+<title>async await</title>
+<p>
+    using async and await
+</p>
+  
+    <body>
+        <script>
+        const photos = [];
+        async function photoUpload(){
+            let status = new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    photos.push('Avatar');
+                    resolve('Profile Updated');
+                },3000)
+            })
+        
+            let result = await status;
+            console.log(photos.length);
+        }
+        
+        photoUpload();
+        photoUpload();
+        </script>
+    </body>
+</head>

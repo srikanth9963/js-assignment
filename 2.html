@@ -1,0 +1,82 @@
+
+<html>
+<head>
+    <title> using oops concept</title>
+    <p>
+        making  this user and moderator and admin to perform certain functions
+    </p>
+</head>
+<body>
+    <script>
+ 
+class User {
+    constructor(name,age,email) 
+    {
+      this.name = name;
+      this.age = age;
+      this.email = email;
+      this.luCoins = 0;
+      this.courses = [];
+    }
+    login(){
+        console.log(`${this.name} has logged in`);
+        return this;
+    }
+    logout(){
+        console.log(`${this.name} has logged out`);
+        return this;
+    }
+}
+
+class Moderator extends User{
+    constructor(name,age,email,role)
+    {
+        super(name,age,email);
+        this.role = role;
+    }    
+    addCoins(user,a)
+    {
+        user.luCoins++;
+        //console.log(`${this.name} has ${this.luCoins} coins`);
+        return user.lucoins;
+    }
+    removeCoins(user,a)
+    {
+        user.luCoins--;
+       // console.log(`${this.name} has ${this.luCoins} coins`);
+        return user.lucoins;
+    }  
+}
+
+class Admin extends Moderator{
+    constructor(name,age,email,role)
+    {
+        super(name,age,email);
+        this.role = role;
+    }
+    addCourse(user,course)
+         {
+                user.courses.push(course);
+         }
+}
+
+
+let user1 = new User(`rajesh`,20,`somesularajesh6@gamil.com`)
+let mod = new Moderator('srikanth',20,`gayamsrikanth@gamil.com`,'moderator');
+let admin = new Admin(`dhruva`,25,`ramcharanmegapowerstar@gmail.com`,'admin');
+user1.login();
+user1.logout();
+
+mod.addCoins(user1);
+mod.addCoins(user1);
+mod.addCoins(user1);
+mod.removeCoins(user1);
+admin.addCourse(user1,"biology");
+admin.addCourse(user1,"physics");
+let users = [user1,mod,admin];
+
+users.forEach(element => { console.log(element); });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+<html >
+<head>
+   
+    <title>higher order functions</title>
+    <pl>
+        making a user to input an number and performing operatins on it using mao and filter
+    </pl>
+</head>
+<body>
+    <script>
+        let a=Number(prompt`enter a number which u want to perform operations on`);
+        
+        if(typeof(3)!= a) console.log(" an error occured");//console.log(a);
+       //creating a user generated array
+        let arr=[];
+        for (let i = 1; i < a; i++)
+         {
+            if(i<=a) arr.push(i);
+            
+            if(i>a)  break;
+        }
+       // using filter to filter the odd numbers ad then map to find the cube sof the filter numbers
+        //console.log(arr);
+        let odd =arr.filter(i => i%2!=0);
+         //console.log(odd);
+         let cubes =odd.map(i => i**3);
+         console.log(cubes);
+
+
+
+         </script>
+</body>
+</html>

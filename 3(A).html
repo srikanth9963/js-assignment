@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <h1>fetch</h1>
+        <p>using fetches and log the data</p>
+    </head>
+    <body>
+        <script>
+            fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response=>response.json())
+            .then(data=>console.log(data))
+            
+            let obj = 
+            {
+            userId:254,
+            title:"Some Title",
+            body:'lorem ipsum',
+            }
+
+            let strobj = JSON.parse(str);
+            console.log(strobj)
+        </script>
+    </body>
+</html>

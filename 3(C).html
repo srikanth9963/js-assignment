@@ -1,0 +1,31 @@
+<html >
+<head>
+  
+    <title>promises</title>
+    <p>using promise</p>
+</head>
+<body>
+    <script>
+        const userData = new Promise((resolve,reject)=>{
+     const error = false;
+
+    if(error){
+        reject("an error occured");
+    }
+    else{
+        resolve({
+            firstname:"rajesh somesula",
+            age:20,
+            class:'btech 3rd year',
+        })
+    }
+
+
+});
+
+userData
+    .then(data=>console.log(data))
+    .catch(error=>console.log(error))
+    </script>
+</body>
+</html>
