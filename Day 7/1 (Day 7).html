@@ -1,0 +1,20 @@
+<html>
+    <head>
+<title>
+    changing colours of a webpage for 5 seconds
+</title>
+    </head>
+    <body>
+        <h1>colours will change for every 5 second</h1>
+        <script>
+     var c = ["blue", "black", "yellow", "green","red",'pink','red','violet'];
+     var i = 0;
+    function change(){
+    document.body.bgColor = c[i];
+    i=(i+1)%c.length;
+    setTimeout(change,5000);   
+}
+change();
+        </script>
+    </body>
+</html>
